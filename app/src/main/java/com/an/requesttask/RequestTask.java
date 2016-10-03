@@ -50,7 +50,7 @@ public class RequestTask extends AsyncTask<String, Void, Object> {
     public void delete(String path,
                     TaskResponseListener listener) {
         this.path = path;
-        this.type = REQUESTTYPE.GET.name();
+        this.type = REQUESTTYPE.DELETE.name();
         this.listener = listener;
     }
 
@@ -58,7 +58,7 @@ public class RequestTask extends AsyncTask<String, Void, Object> {
                     Map<String, String> queryParams,
                     TaskResponseListener listener) {
         this.path = path;
-        this.type = REQUESTTYPE.GET.name();
+        this.type = REQUESTTYPE.DELETE.name();
         this.queryParams = queryParams;
         this.listener = listener;
     }
