@@ -43,7 +43,7 @@ public class RequestUtil {
     }
 
     /* You can use this method to retrieve the
-     * request response from your local cache   */
+     * request response from your local cache  */
     public static Object readObjectFromDisk(String fileName) {
         fileName = String.format(LOCALE_CACHE_PATH, fileName);
         ObjectUtil objDataStream = new ObjectUtil();
