@@ -88,3 +88,32 @@ requestTask.start();
 ```
 </br>
 Note: You need to pass the Base url to BASE_URL variable in RquestTask.java class<br/>
+And that's it!
+
+<b>Wrapper to store in Local Cache</b></br>
+If you would like to save your request response to a local cache, you can use the ObjectUtil.java class:</br>
+You cal access this class using:
+```
+ObjectUtil objDataStream = new ObjectUtil();
+objDataStream.writeObjects(object,fileName);
+```
+
+You need to provide a fileName here. 
+This filename needs to be the path where you would like to store this object.
+The object could be anything.
+
+In order to read the file from the local cache, you can use:
+```
+ObjectUtil objDataStream = new ObjectUtil();
+return objDataStream.readObjects(fileName);
+```
+
+Or you could use the Util class provided in the library and use:
+```
+RequestUtil.writeObjectToDisk(fileName, result);
+RequestUtil.readObjectFromDisk(result);
+```
+
+Enjoy!
+
+
