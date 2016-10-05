@@ -10,7 +10,6 @@ HTTP POST</br>
 HTTP PUT</br>
 HTTP DELETE</br>
 
-
 <h3><b>Usage:</b></h3>
 ```RequestTask requestTask = new RequestTask();```
 
@@ -87,4 +86,5 @@ requestTask.delete("sample_one.json", new RequestTask.TaskResponseListener() {
 ```
 requestTask.start();
 ```
-
+</br>
+Note: You need to pass the Base url to BASE_URL variable in RquestTask.java class<br/>
