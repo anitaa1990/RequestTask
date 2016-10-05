@@ -26,8 +26,28 @@ public class RequestUtil {
     /* set the timeout for a connection  */
     private final static int ONE_MINUTE = 60;
 
+    /* replace the {packageName} with your own app's package name  */
+    private static final String LOCALE_CACHE_PATH = "/data/data/{packageName}/%s";
+
     public static void setLog(String message) {
         if(LOGGING) Log.d(TAG, message);
+    }
+
+
+    /* You can use this method to store the
+     * request response from your local cache  */
+    public static void writeObjectToDisk(String fileName, Object object) {
+        fileName = String.format(LOCALE_CACHE_PATH, fileName);
+        ObjectUtil objDataStream = new ObjectUtil();
+        objDataStream.writeObjects(object,fileName);
+    }
+
+    /* You can use this method to retrieve the
+     * request response from your local cache   */
+    public static Object readObjectFromDisk(String fileName) {
+        fileName = String.format(LOCALE_CACHE_PATH, fileName);
+        ObjectUtil objDataStream = new ObjectUtil();
+        return objDataStream.readObjects(fileName);
     }
 
     private static String getHttpResponse(InputStream inputStream) throws IOException {
