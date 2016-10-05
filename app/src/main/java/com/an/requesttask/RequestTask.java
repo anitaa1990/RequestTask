@@ -196,8 +196,8 @@ public class RequestTask extends AsyncTask<String, Void, Object> {
 
         /* if you would like to save the file locally,
          * you can uncomment the below  lines */
-        String fileName = "";
-        RequestUtil.writeObjectToDisk(fileName, result);
+//        String fileName = "";
+//        RequestUtil.writeObjectToDisk(fileName, result);
     }
 
 
