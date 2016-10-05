@@ -90,7 +90,7 @@ requestTask.start();
 Note: You need to pass the Base url to BASE_URL variable in RquestTask.java class<br/>
 And that's it!
 
-<b>Wrapper to store in Local Cache</b>
+<b>Wrapper to store in Local Cache</b></br>
 If you would like to save your request response to a local cache, you can use the ObjectUtil.java class:</br>
 You cal access this class using:
 ```
